@@ -102,4 +102,4 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }); res.end('Không tìm thấy trang.');
   }
-}).listen(port, '127.0.0.1', () => console.log(`BeyondU AI đang chạy tại http://localhost:${port}`));
+}).listen(port, '0.0.0.0', () => console.log(`BeyondU AI đang chạy tại http://localhost:${port}`));

@@ -1,0 +1,15 @@
+services:
+  beyondu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: beyondu:latest
+    container_name: beyondu
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:4173:4173"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NODE_ENV: production
